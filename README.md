@@ -2,7 +2,7 @@
 An end-to-end machine learning project designed to identify high-risk credit card applicants. The system utilizes personal and financial demographic data alongside past payment histories to predict whether an applicant should be approved or rejected.
 igned to identify high-risk credit card applicants. The system utilizes personal and financial demographic data alongside past payment histories to predict whether an applicant should be approved or rejected.
 
-## 📌 Table of Contents
+##  Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset Description](#dataset-description)
 - [Pipeline & Workflow](#pipeline--workflow)
@@ -13,7 +13,7 @@ igned to identify high-risk credit card applicants. The system utilizes personal
 
 ---
 
-## 🔍 Project Overview
+##  Project Overview
 Financial institutions need robust systems to assess creditworthiness and control default rates. This repository builds a machine learning pipeline that:
 1. Consolidates application details with historical payment records.
 2. Defines a target label mapping risk profile based on historical payment behavior.
@@ -21,7 +21,7 @@ Financial institutions need robust systems to assess creditworthiness and contro
 4. Trains a **Random Forest Classifier** to flag risky applicants.
 5. Saves the model and preprocessing artifacts for real-time inference.
 
-## 📊 Dataset Description
+##  Dataset Description
 The analysis utilizes two main relational datasets:
 1. **`application_record.csv`**: Contains client demographic attributes (e.g., gender, income, assets, education, occupation, age, employment length).
 2. **`credit_record.csv`**: Contains monthly payment tracking history with status indicators:
@@ -41,7 +41,7 @@ Applicants with payment delays of 30 days or more (`STATUS` 1-5) at any point in
 - **Step 5 - Model Training**: Developed and evaluated a Random Forest Classifier.
 - **Step 6 - Export**: Serialized both the trained estimator and the standard scaler object into `.pkl` format for production.
 
-## 📈 Model Performance
+##  Model Performance
 
 ### Without Class Balancing
 - **Accuracy**: ~67%
@@ -51,14 +51,14 @@ Applicants with payment delays of 30 days or more (`STATUS` 1-5) at any point in
 - **Accuracy**: ~65%
 - **Overall f1-score** and predictive stability on minority class instances were boosted, establishing a more risk-averse model suitable for deployment.
 
-## 🔑 Feature Importances
+##  Feature Importances
 The top predictors identified by the model during analysis:
 1. **Total Income Amount (`AMT_INCOME_TOTAL`)**
 2. **Applicant Age (`AGE`)**
 3. **Years of Employment (`YEARS_EMPLOYED`)**
 4. **Occupation Type (`OCCUPATION_TYPE`)**
 
-## 🚀 How to Run & Deploy
+##  How to Run & Deploy
 
 ### 1. Project Directory Structure
 ```text
@@ -84,7 +84,7 @@ loaded_scaler = joblib.load('scaler.pkl')
 # prediction = loaded_model.predict(scaled_features)
 ```
 
-## 📦 Requirements
+##  Requirements
 To run the notebook and scripts locally, install:
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn joblib
